@@ -5,26 +5,11 @@ namespace cmsgears\widgets\social;
 use \Yii;
 use yii\base\Widget;
 
-class SocialShare extends Widget { 
+class SocialShare extends \cmsgears\core\common\widgets\BaseWidget { 
 
 	// Variables ---------------------------------------------------
 
 	// Public Variables --------------------
-
-	/**
-	 * The html options for the parent container.
-	 */
-	public $options;
-
-	/**
-	 * The path at which view file is located. It can have alias. By default it's the views folder within widget directory.
-	 */
-	public $viewPath	= null;
-
-	/**
-	 * The view file used to render widget.
-	 */
-	public $view		= 'simple';
 
 	// Constructor and Initialisation ------------------------------
 
@@ -43,7 +28,7 @@ class SocialShare extends Widget {
 
     public function run() {
 		 
-		$widgetHtml = $this->render( $this->view );
+		$widgetHtml = $this->render( $this->viewFile );
 
 		return Html::tag( 'div', $widgetHtml, $this->options );
     }
