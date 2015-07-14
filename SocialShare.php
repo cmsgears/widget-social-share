@@ -5,7 +5,7 @@ namespace cmsgears\widgets\social;
 use \Yii;
 use yii\base\Widget;
 
-class SocialShare extends \cmsgears\core\common\widgets\BaseWidget { 
+class SocialShare extends \cmsgears\core\common\base\Widget { 
 
 	// Variables ---------------------------------------------------
 
