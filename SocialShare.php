@@ -1,5 +1,5 @@
 <?php
-namespace cmsgears\widgets\social;
+namespace cmsgears\widgets\social\share;
 
 // Yii Imports
 use \Yii;

@@ -1,16 +1,16 @@
 {
 	"name": "cmsgears/widget-social-share",
-	"description": "The Social Share widget for CMSGears.",
+	"description": "The Social Share Widget for CMSGears.",
 	"homepage": "http://www.cmsgears.org",
 	"type": "package",
-	"keywords": [ "yii2", "cmsgears", "widget", "social share" ],
+	"keywords": [ "yii", "yii2", "cmsgears", "widget", "social share" ],
 	"license": "GPLv3",
 	"support": {
 		"resources": "http://www.cmsgears.org"
 	},
 	"autoload": {
 		"psr-4": {
-			"cmsgears\\widgets\\social\\": ""
+			"cmsgears\\widgets\\social\\share\\": ""
 		}
 	},
     "require": {
