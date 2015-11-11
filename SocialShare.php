@@ -4,6 +4,7 @@ namespace cmsgears\widgets\social\share;
 // Yii Imports
 use \Yii;
 use yii\base\Widget;
+use yii\helpers\Html;
 
 class SocialShare extends \cmsgears\core\common\base\Widget { 
 
