@@ -29,7 +29,7 @@ class SocialShare extends \cmsgears\core\common\base\Widget {
 
     public function run() {
 		 
-		$widgetHtml = $this->render( $this->viewFile );
+		$widgetHtml = $this->render( $this->template );
 
 		return Html::tag( 'div', $widgetHtml, $this->options );
     }
