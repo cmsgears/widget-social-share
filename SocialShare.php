@@ -28,11 +28,18 @@ class SocialShare extends \cmsgears\core\common\base\Widget {
 	// yii\base\Widget
 
     public function run() {
-		 
-		$widgetHtml = $this->render( $this->template );
+
+		$widgetHtml = $this->renderWidget();
 
 		return Html::tag( 'div', $widgetHtml, $this->options );
     }
+
+	public function renderWidget( $config = [] ) {
+
+		$widgetHtml = $this->render( $this->template );
+
+		return $widgetHtml;
+	}
 }
 
 ?>
