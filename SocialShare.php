@@ -12,6 +12,8 @@ class SocialShare extends \cmsgears\core\common\base\Widget {
 
 	// Public Variables --------------------
 
+	public $url;
+
 	// Constructor and Initialisation ------------------------------
 
 	// yii\base\Object
@@ -36,7 +38,7 @@ class SocialShare extends \cmsgears\core\common\base\Widget {
 
 	public function renderWidget( $config = [] ) {
 
-		$widgetHtml = $this->render( $this->template );
+		$widgetHtml = $this->render( $this->template, [ 'url' => $this->url ] );
 
 		return $widgetHtml;
 	}
