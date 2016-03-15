@@ -13,6 +13,7 @@ class SocialShare extends \cmsgears\core\common\base\Widget {
 	// Public Variables --------------------
 
 	public $url;
+    public $links   = [];
 
 	// Constructor and Initialisation ------------------------------
 
@@ -37,8 +38,16 @@ class SocialShare extends \cmsgears\core\common\base\Widget {
     }
 
 	public function renderWidget( $config = [] ) {
+	    
+        $showLinks  = false;
+        
+        if( $this->links != null ) {
+            
+            $showLinks      = true;
+            $this->links    = array_flip( $this->links );
+        }
 
-		$widgetHtml = $this->render( $this->template, [ 'url' => $this->url ] );
+		$widgetHtml = $this->render( $this->template, [ 'url' => $this->url, 'links' => $this->links, 'showLinks' => $showLinks ] );
 
 		return $widgetHtml;
 	}
