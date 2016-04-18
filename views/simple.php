@@ -1,5 +1,5 @@
 <?php if( $showLinks ) { ?>
-    <ul class="widget-social-share">
+    <ul class="widget-social-share nav">
         <?php if( isset( $links['facebook'] ) ) { ?>
            <li> <a title="Share on Facebook" class="fa fa-facebook" href="http://www.facebook.com/sharer.php?u=<?=$url?>" target="_blank"></a></li>
         <?php } ?>
