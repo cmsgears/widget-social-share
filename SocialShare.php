@@ -10,9 +10,16 @@ class SocialShare extends \cmsgears\core\common\base\Widget {
 
 	// Variables ---------------------------------------------------
 
+	const ICON_SET_FA	= 'fa fa-';
+
+	const ICON_SET_CMTI	= 'cmti cmti-social-';
+
 	// Public Variables --------------------
 
 	public $url;
+
+	public $iconSet	= self::ICON_SET_CMTI;
+
     public $links   = [ 'facebook', 'twitter', 'gplus', 'linkedin' ];
 
 	// Constructor and Initialisation ------------------------------
@@ -39,15 +46,9 @@ class SocialShare extends \cmsgears\core\common\base\Widget {
 
 	public function renderWidget( $config = [] ) {
 
-        $showLinks  = false;
+        $this->links    = array_flip( $this->links );
 
-        if( $this->links != null ) {
-
-            $showLinks      = true;
-            $this->links    = array_flip( $this->links );
-        }
-
-		$widgetHtml = $this->render( $this->template, [ 'url' => $this->url, 'links' => $this->links, 'showLinks' => $showLinks ] );
+		$widgetHtml 	= $this->render( $this->template, [ 'widget' => $this ] );
 
 		return $widgetHtml;
 	}
