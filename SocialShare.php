@@ -6,11 +6,21 @@ use \Yii;
 use yii\base\Widget;
 use yii\helpers\Html;
 
-class SocialShare extends \cmsgears\core\common\base\Widget { 
+class SocialShare extends \cmsgears\core\common\base\Widget {
 
 	// Variables ---------------------------------------------------
 
+	const ICON_SET_FA	= 'fa fa-';
+
+	const ICON_SET_CMTI	= 'cmti cmti-social-';
+
 	// Public Variables --------------------
+
+	public $url;
+
+	public $iconSet	= self::ICON_SET_CMTI;
+
+    public $links   = [ 'facebook', 'twitter', 'gplus', 'linkedin' ];
 
 	// Constructor and Initialisation ------------------------------
 
@@ -28,11 +38,20 @@ class SocialShare extends \cmsgears\core\common\base\Widget {
 	// yii\base\Widget
 
     public function run() {
-		 
-		$widgetHtml = $this->render( $this->template );
+
+		$widgetHtml = $this->renderWidget();
 
 		return Html::tag( 'div', $widgetHtml, $this->options );
     }
+
+	public function renderWidget( $config = [] ) {
+
+        $this->links    = array_flip( $this->links );
+
+		$widgetHtml 	= $this->render( $this->template, [ 'widget' => $this ] );
+
+		return $widgetHtml;
+	}
 }
 
 ?>
