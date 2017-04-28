@@ -53,5 +53,3 @@ class SocialShare extends \cmsgears\core\common\base\Widget {
 		return $widgetHtml;
 	}
 }
-
-?>
