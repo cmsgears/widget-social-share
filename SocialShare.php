@@ -12,10 +12,7 @@ namespace cmsgears\widgets\social\share;
 // Yii Imports
 use yii\helpers\Html;
 
-// CMG Imports
-use cmsgears\core\common\base\Widget;
-
-class SocialShare extends Widget {
+class SocialShare extends \cmsgears\core\common\base\Widget {
 
 	// Variables ---------------------------------------------------
 
@@ -35,7 +32,7 @@ class SocialShare extends Widget {
 
 	// Public -----------------
 
-	public $wrap	= true;
+	public $wrap = true;
 
 	public $options	= [ 'class' => 'widget widget-social-share' ];
 
@@ -58,7 +55,7 @@ class SocialShare extends Widget {
 	 *
 	 * @var string
 	 */
-    public $links = [ 'facebook', 'twitter', 'gplus', 'linkedin' ];
+    public $links = [ 'facebook', 'twitter', 'linkedin' ];
 
 	// Protected --------------
 
@@ -82,9 +79,9 @@ class SocialShare extends Widget {
 
 	public function renderWidget( $config = [] ) {
 
-        $this->links    = array_flip( $this->links );
+		$this->links = array_flip( $this->links );
 
-		$widgetHtml 	= $this->render( $this->template, [ 'widget' => $this ] );
+		$widgetHtml = $this->render( $this->template, [ 'widget' => $this ] );
 
 		if( $this->wrap ) {
 
