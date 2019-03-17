@@ -55,7 +55,7 @@ class SocialShare extends \cmsgears\core\common\base\Widget {
 	 *
 	 * @var string
 	 */
-    public $links = [ 'facebook', 'twitter', 'linkedin' ];
+    public $links = [ 'facebook', 'twitter', 'linkedin', 'pinterest', 'tumblr', 'mix', 'reddit' ];
 
 	// Protected --------------
 
