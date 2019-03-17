@@ -1,13 +1,12 @@
 <ul class="nav">
-    <?php if( array_key_exists( 'facebook', $widget->links ) ) { ?>
-       <li>
-		   <a title="Share on Facebook" class="share-facebook <?= $widget->iconSet ?>facebook color-facebook" href="http://www.facebook.com/sharer.php?u=<?= $widget->url ?>" target="_blank" ></a>
-	   </li>
-    <?php } ?>
-   
     <?php if( array_key_exists( 'reddit', $widget->links ) ) { ?>
        <li>
 		   <a title="Share on Facebook" class="share-facebook <?= $widget->iconSet ?>reddit color-facebook" href="https://reddit.com/submit?url=<?= $widget->url ?>" target="_blank" ></a>
+	   </li>
+    <?php } ?>
+	<?php if( array_key_exists( 'facebook', $widget->links ) ) { ?>
+       <li>
+		   <a title="Share on Facebook" class="share-facebook <?= $widget->iconSet ?>facebook color-facebook" href="http://www.facebook.com/sharer.php?u=<?= $widget->url ?>" target="_blank" ></a>
 	   </li>
     <?php } ?>
     <?php if( array_key_exists( 'pinterest', $widget->links ) ) { ?>
